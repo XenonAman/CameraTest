@@ -2,20 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
-    tools:context="com.example.amank.cameratest.AddReminder">
+    android:background="@android:color/background_light"
+    android:backgroundTint="@color/colorPrimaryDark"
+    tools:context="layout.AddReminder">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:id="@+id/Add"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"
-        android:backgroundTint="#CEF5F4"
-        android:onClick="button"
-        android:text="@string/bu"
-        android:textColorLink="@android:color/black"
-        android:textSize="200sp"
-        tools:ignore="UnusedAttribute" />
+
 </FrameLayout>

@@ -8,6 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ScrollingTabContainerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -27,6 +29,8 @@ public class camera extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
         myTab = (TabLayout)findViewById(R.id.myTab);
         myPager = (ViewPager)findViewById(R.id.mypager);
+        myPager.setCurrentItem(1);
+
 
         myPager.setAdapter(new MyOwnPageAdapter(getSupportFragmentManager()));
         myTab.setupWithViewPager(myPager);
@@ -53,7 +57,7 @@ public class camera extends AppCompatActivity {
 
     class MyOwnPageAdapter extends FragmentPagerAdapter{
 
-        String data[]={"AddReminder","ReminderList","Setting"};
+        String data[]={"HOME","NEWSFEED","MYPROFILE"};
 
         public MyOwnPageAdapter(FragmentManager fm) {super(fm);}
 
@@ -85,5 +89,16 @@ public class camera extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return data[position];
         }
+    }
+
+    //--------Save Button ka CODE------------//
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.save,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public void savekar(MenuItem item) {
+
     }
 }

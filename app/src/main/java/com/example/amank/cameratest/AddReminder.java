@@ -25,6 +25,7 @@ public class AddReminder extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_add_reminder, container, false);
 
+        /*
         Button button = (Button)view.findViewById(R.id.Add);
 
 
@@ -35,6 +36,7 @@ public class AddReminder extends Fragment {
             }
 
         });
+        */
 
         return view;
 
